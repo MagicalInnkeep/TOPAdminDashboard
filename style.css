@@ -12,7 +12,7 @@
 
 .container{
     display: grid;
-    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-columns: 20% repeat(3, 1fr) ;
     grid-template-rows: 125px 1fr 1fr;
     background-color: var(--var-gray);
     text-align: center;
@@ -25,8 +25,49 @@
     color: var(--var-white);
     height: 100vh;
     display: grid;
+    grid-template-rows: 80px 200px 100px;
+    padding-left: 15px;
+    gap: 15px;
+}
+
+.sidepanel{
+    color: var(--var-white);
+    font-weight: bolder;
+}
+
+
+.mainlinks,
+.settingspanel{
+    display: grid;
+}
+
+.logo,
+.mainlinks>a,
+.settingspanel>a{
+    display: grid;
     grid-template-columns: 1fr 5fr;
-    
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: var(--var-white);
+}
+
+a>img{
+    justify-self: right;
+}
+
+a>p{
+    justify-self: left;
+}
+
+.logo>h2{
+    justify-self: left;
+    align-self: center;
+}
+.logo>img{
+    justify-self: right;
+    align-self: center;
 }
 
 .header{
@@ -58,6 +99,7 @@
     border: none;
     height: 30px;
     flex:1;
+    text-align: right;
 }
 
 .userSettings{
@@ -67,6 +109,7 @@
     align-items: center;
     gap: 15px;
 }
+
 .userProfile{
     display: grid;
     grid-template-columns: 25px 100px;
@@ -141,6 +184,8 @@
 .project{
     background-color: var(--var-white);
     border-left: 3px solid var(--var-orange);
+    text-align: left;
+    padding: 5px;
 }
 
 .announcements{
@@ -151,12 +196,53 @@
     display: grid;
     grid-template-rows: 2em repeat(4,1fr);
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .announce, 
 .trend{
     background-color: var(--var-white);
     text-align: left;
-    padding: 5px 15px;
+    padding: 5px 20px;
     border-bottom: 1px solid var(--var-gray);
+    margin-right: 15px;
+}
+
+.announce:first-of-type{
+    padding-top:20px;
+}
+.announce:last-of-type{
+    padding-bottom: 20px;
+}
+
+h2{
+    text-align: left;
+    height: 1.4em;
+}
+
+.trend{
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    grid-template-rows: 17.5px 17.5px;
+    column-gap: 15px;
+    align-items: center;
+}
+
+.trend>img{
+    height: 35px;
+    width: 35px;
+    border-radius: 17.5px;
+    object-fit: cover;
+    object-position: 0% 0%;
+    border: 1px solid var(--var-gray);
+    grid-row: 1 / 3;
+}
+
+.tag{
+    font-weight: bold;
+}
+
+.role{
+    font-size: smaller;
+
 }
